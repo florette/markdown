@@ -1,0 +1,78 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: blanchedalmond;
+}
+
+.app {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 50px;
+}
+
+.column {
+    flex: 0 1 50%;
+}
+
+textarea,
+#preview {
+    border: none;
+    height: 1000px;
+    padding: 20px 40px;
+    overflow-y: scroll;
+    width: 100%;
+    background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+img {
+    max-width: 100%;
+}
+
+#preview > p > code {
+    padding: 3px;
+}
+
+#preview code {
+    background: WhiteSmoke;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+#preview pre {
+    display: block;
+    overflow: auto;
+    background: WhiteSmoke;
+    padding: 5px;
+    line-height: 1.2;
+}
+
+#preview blockquote {
+    padding: 1px;
+    border-left: 3px solid IndianRed;
+    background: #ffd6d6;
+    color: IndianRed;
+    padding-left: 12px;
+    margin-left: 25px;
+    display: block;
+}
+
+#preview table {
+    border-collapse: collapse;
+}
+
+#preview td,
+#preview th {
+    border: 1px solid LightSlateGrey;
+    padding: 10px;
+}
